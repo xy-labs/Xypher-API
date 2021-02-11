@@ -22,7 +22,7 @@ The base endpoint is **https://api.xypher.com/v1/**. The data will always be ret
 ****************
 Limits
 ****************
-The current limit is 70 requests/minute. Once the limit is violated, a message will be returned. Repeatedly 
+The current limit is 70 requests/minute and 7200/hour. Once the limit is violated, a message will be returned. Repeatedly 
 violating limits will result in restrictions to the API.
 
 
