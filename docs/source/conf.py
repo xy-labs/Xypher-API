@@ -21,7 +21,7 @@ import sphinx_rtd_theme
 project = 'XAPI'
 copyright = '2021, Xypher'
 author = 'Xypher'
-
+master_doc = 'index'
 # The full version, including alpha/beta/rc tags
 release = '0.1'
 
