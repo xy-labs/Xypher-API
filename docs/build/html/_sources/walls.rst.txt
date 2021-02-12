@@ -56,3 +56,17 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on
 **above_price:** Get all liquidations above a specified price. :code:`/v1/hmc/?key=<YOUR_KEY>&above_price=<PRICE>`.
 
 **below_price:** Get all liquidations below a specified price. :code:`/v1/hmc/?key=<YOUR_KEY>&below_price=<PRICE>`.
+
+**Example:** :code:`/v1/hmc/?key=<YOUR-KEY>&market=BTCUSDT&exchange=binance&timeframe=30m`.
+
+.. code-block:: json
+
+    {"count":66713,"next":"http://51.79.25.135/v1/hmc/?exchange=binance&key=<YOUR-KEY>&market=BTCUSDT&page=2&timeframe=30m","previous":null,"results":[{"UTCunix":1605025800,"price":15500.0,"amount":257.00074,"candle":"2020-11-10T16:30:00Z", "exchange":null}, {"UTCunix":1605025800,"price":14800.0,"amount":201.75888,"candle":"2020-11-10T16:30:00Z", "exchange":null} ... ]
+
+**UTCunix:** It's the specific timestamp at which the wall showed up in the orderbook.
+
+**Price:** Rate of the wall.
+
+**Amount:** Amount of the wall.
+
+**Candle:** Timestamp of the candle at which the wall showed up in the orderbook.

@@ -33,6 +33,7 @@ Contents
    :glob:
    :Caption: Contents
 
+   contact
    auth
 
   
@@ -46,4 +47,5 @@ Contents
    walls
    markets
    mm
+   examples
    

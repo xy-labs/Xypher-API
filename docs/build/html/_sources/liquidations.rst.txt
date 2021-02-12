@@ -55,3 +55,19 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO XBTUSDT, ETHUSDT and so on
 **above_price:** Get all liquidations above a specified price. :code:`/v1/liquidations/?key=<YOUR_KEY>&above_price=<PRICE>`.
 
 **below_price:** Get all liquidations below a specified price. :code:`/v1/liquidations/?key=<YOUR_KEY>&below_price=<PRICE>`.
+
+
+**EXAMPLE:**  
+:code:`/v1/liquidations/?key=<YOUR_KEY>&market=BTCUSDT`.
+
+.. code-block:: json
+
+	{"count":1371311,"next":"http://api.xypher.io/v1/liquidations/?key=<YOUR-KEY>&market=BTCUSDT&page=2","previous":null,
+	"results":[
+	{"market":"BTCUSDT","exchange":"Binance","side":"Long","amount":"1100","price":"47839.49","unixtime":1613087216},
+	{"market":"BTCUSDT","exchange":"Binance","side":"Short","amount":"480","price":"48057.39","unixtime":1613086429},
+	{"market":"BTCUSDT","exchange":"Binance","side":"Short","amount":"4661","price":"48054.11","unixtime":1613086429},
+	{"market":"BTCUSDT","exchange":"Binance","side":"Short","amount":"14709","price":"48069.89","unixtime":1613086427}
+	]}
+
+    

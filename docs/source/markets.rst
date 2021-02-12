@@ -133,3 +133,5 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on
 **volume:** Get all markets with an higher volume than provided.
 :code:`/v1/markets/?key=<YOUR_KEY>&volume=<VOLUME>`.
 
+**EXAMPLE:** :code:`/v1/markets/?key=<YOUR_KEY>&pair=BTCUSDT`.
+

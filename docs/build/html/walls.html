@@ -86,6 +86,7 @@
             
               <p class="caption"><span class="caption-text">Contents</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact us &amp; support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="auth.html">Authentication</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Endpoints</span></p>
@@ -94,6 +95,8 @@
 <li class="toctree-l1"><a class="reference internal" href="liquidations.html">Liquidations</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Walls</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markets.html">Markets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mm.html">Market movement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
 </ul>
 
             
@@ -231,6 +234,14 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on</
 <p><strong>below_amount:</strong> Get all liquidations above a specified amount. <code class="code docutils literal notranslate"><span class="pre">/v1/hmc/?key=&lt;YOUR_KEY&gt;&amp;below_amount=&lt;AMOUNT&gt;</span></code>.</p>
 <p><strong>above_price:</strong> Get all liquidations above a specified price. <code class="code docutils literal notranslate"><span class="pre">/v1/hmc/?key=&lt;YOUR_KEY&gt;&amp;above_price=&lt;PRICE&gt;</span></code>.</p>
 <p><strong>below_price:</strong> Get all liquidations below a specified price. <code class="code docutils literal notranslate"><span class="pre">/v1/hmc/?key=&lt;YOUR_KEY&gt;&amp;below_price=&lt;PRICE&gt;</span></code>.</p>
+<p><strong>Example:</strong> <code class="code docutils literal notranslate"><span class="pre">/v1/hmc/?key=&lt;YOUR-KEY&gt;&amp;market=BTCUSDT&amp;exchange=binance&amp;timeframe=30m</span></code>.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{&quot;count&quot;:66713,&quot;next&quot;:&quot;http://51.79.25.135/v1/hmc/?exchange=binance&amp;key=&lt;YOUR-KEY&gt;&amp;market=BTCUSDT&amp;page=2&amp;timeframe=30m&quot;,&quot;previous&quot;:null,&quot;results&quot;:[{&quot;UTCunix&quot;:1605025800,&quot;price&quot;:15500.0,&quot;amount&quot;:257.00074,&quot;candle&quot;:&quot;2020-11-10T16:30:00Z&quot;, &quot;exchange&quot;:null}, {&quot;UTCunix&quot;:1605025800,&quot;price&quot;:14800.0,&quot;amount&quot;:201.75888,&quot;candle&quot;:&quot;2020-11-10T16:30:00Z&quot;, &quot;exchange&quot;:null} ... ]
+</pre></div>
+</div>
+<p><strong>UTCunix:</strong> It’s the specific timestamp at which the wall showed up in the orderbook.</p>
+<p><strong>Price:</strong> Rate of the wall.</p>
+<p><strong>Amount:</strong> Amount of the wall.</p>
+<p><strong>Candle:</strong> Timestamp of the candle at which the wall showed up in the orderbook.</p>
 </div>
 
 
