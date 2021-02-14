@@ -23,6 +23,8 @@ Get liquidations data from Binance Futures and Bitmex
 +------------+------------+-----------+
 | Exchange   | String     |    NO     |
 +------------+------------+-----------+
+| Side       | String     |    NO     |
++------------+------------+-----------+
 |above_amount| Float      |    NO     |
 +------------+------------+-----------+
 |below_amount| Float      |    NO     |
@@ -46,7 +48,9 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO XBTUSDT, ETHUSDT and so on
 **amount:** Get all the liquidations where the amount is bigger than the provided amount. Must be a float 
 :code:`/v1/liquidations/?key=<YOUR_KEY>&amount=<MARKET>`.
 
-**Exchange:** Get all the data from a specific exchange. Available exchanges: Binance Futures, Bitmex. :code:`/v1/liquidations/?key=<YOUR_KEY>&exchange=<MARKET>`.
+**Exchange:** Get all the data from a specific exchange. For now Bitmex and Binance Futures the only available exchange. :code:`/v1/liquidations/?key=<YOUR_KEY>&exchange=<EXCHANGE>`. Exchange can be  :code:`bitmex` or :code:`binance_futures`
+
+**Exchange:** Choose a side. :code:`/v1/liquidations/?key=<YOUR_KEY>&side=<SIDE>`. Side can be  :code:`Short` or :code:`Long`
 
 **above_amount:** Get all liquidations above a specified amount. :code:`/v1/liquidations/?key=<YOUR_KEY>&above_amount=<AMOUNT>`.
 

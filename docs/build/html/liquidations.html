@@ -87,7 +87,7 @@
               <p class="caption"><span class="caption-text">Contents</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact us &amp; support</a></li>
-<li class="toctree-l1"><a class="reference internal" href="auth.html">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auth.html">Authentication &amp; Pagination</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Endpoints</span></p>
 <ul class="current">
@@ -204,19 +204,23 @@
 <td><p>String</p></td>
 <td><p>NO</p></td>
 </tr>
-<tr class="row-odd"><td><p>above_amount</p></td>
+<tr class="row-odd"><td><p>Side</p></td>
+<td><p>String</p></td>
+<td><p>NO</p></td>
+</tr>
+<tr class="row-even"><td><p>above_amount</p></td>
 <td><p>Float</p></td>
 <td><p>NO</p></td>
 </tr>
-<tr class="row-even"><td><p>below_amount</p></td>
+<tr class="row-odd"><td><p>below_amount</p></td>
 <td><p>Float</p></td>
 <td><p>NO</p></td>
 </tr>
-<tr class="row-odd"><td><p>above_price</p></td>
+<tr class="row-even"><td><p>above_price</p></td>
 <td><p>Float</p></td>
 <td><p>NO</p></td>
 </tr>
-<tr class="row-even"><td><p>below_price</p></td>
+<tr class="row-odd"><td><p>below_price</p></td>
 <td><p>Float</p></td>
 <td><p>NO</p></td>
 </tr>
@@ -230,7 +234,8 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO XBTUSDT, ETHUSDT and so on</p>
 <code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;EndDate=&lt;MARKET&gt;</span></code>.</p>
 <p><strong>amount:</strong> Get all the liquidations where the amount is bigger than the provided amount. Must be a float
 <code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;amount=&lt;MARKET&gt;</span></code>.</p>
-<p><strong>Exchange:</strong> Get all the data from a specific exchange. Available exchanges: Binance Futures, Bitmex. <code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;exchange=&lt;MARKET&gt;</span></code>.</p>
+<p><strong>Exchange:</strong> Get all the data from a specific exchange. For now Bitmex and Binance Futures the only available exchange. <code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;exchange=&lt;EXCHANGE&gt;</span></code>. Exchange can be  <code class="code docutils literal notranslate"><span class="pre">bitmex</span></code> or <code class="code docutils literal notranslate"><span class="pre">binance_futures</span></code></p>
+<p><strong>Exchange:</strong> Choose a side. <code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;side=&lt;SIDE&gt;</span></code>. Side can be  <code class="code docutils literal notranslate"><span class="pre">Short</span></code> or <code class="code docutils literal notranslate"><span class="pre">Long</span></code></p>
 <p><strong>above_amount:</strong> Get all liquidations above a specified amount. <code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;above_amount=&lt;AMOUNT&gt;</span></code>.</p>
 <p><strong>below_amount:</strong> Get all liquidations above a specified amount. <code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;below_amount=&lt;AMOUNT&gt;</span></code>.</p>
 <p><strong>above_price:</strong> Get all liquidations above a specified price. <code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;above_price=&lt;PRICE&gt;</span></code>.</p>

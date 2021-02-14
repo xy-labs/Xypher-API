@@ -86,7 +86,7 @@
               <p class="caption"><span class="caption-text">Contents</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact us &amp; support</a></li>
-<li class="toctree-l1"><a class="reference internal" href="auth.html">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auth.html">Authentication &amp; Pagination</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Endpoints</span></p>
 <ul class="current">
@@ -165,6 +165,75 @@
             
   <div class="section" id="examples">
 <h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
+<p><strong>Get the latest signals for the BTCUSDT market across multiple exchanges</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="c1">#Get the latest Whalesniper signals for the BTC-USDT market</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;YOUR-KEY&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;market&#39;</span><span class="p">:</span> <span class="s1">&#39;BTCUSDT&#39;</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://api.xypher.io/v1/whalesniper/&#39;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="n">signals</span> <span class="o">=</span> <span class="p">[</span><span class="n">signal</span> <span class="k">for</span> <span class="n">signal</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;results&#39;</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">signals</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Get all the walls above 300 BTC across the most popular exchanges</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="c1">#Get all the walls across the most popular exchanges above 300 BTC</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;YOUR-KEY&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;market&#39;</span><span class="p">:</span> <span class="s1">&#39;BTCUSDT&#39;</span><span class="p">,</span> <span class="s1">&#39;exchange&#39;</span><span class="p">:</span> <span class="s1">&#39;combined&#39;</span><span class="p">,</span> <span class="s1">&#39;timeframe&#39;</span><span class="p">:</span> <span class="s1">&#39;30m&#39;</span><span class="p">,</span> <span class="s1">&#39;above_amount&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://api.xypher.io/v1/hmc/&#39;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="n">walls</span> <span class="o">=</span> <span class="p">[</span><span class="n">wall</span> <span class="k">for</span> <span class="n">wall</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;results&#39;</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">walls</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>#Get all the liquidations above 100000 USD and above 30000 price for the BTCUSDT market</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="c1">#Get all the liquidations above 100000 USD and above 30k price.</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;YOUR-KEY&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;market&#39;</span><span class="p">:</span> <span class="s1">&#39;BTCUSDT&#39;</span><span class="p">,</span> <span class="s1">&#39;above_amount&#39;</span><span class="p">:</span> <span class="mi">100000</span><span class="p">,</span> <span class="s1">&#39;above_rate&#39;</span><span class="p">:</span> <span class="mi">30000</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://api.xypher.io/v1/liquidations/&#39;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="n">liqs</span> <span class="o">=</span> <span class="p">[</span><span class="n">liq</span> <span class="k">for</span> <span class="n">liq</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;results&#39;</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">liqs</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>#Get a summary of all the markets on Binance</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="c1">#Get all the liquidations above 100000 USD and above 30k price.</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;YOUR-KEY&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;exchange&#39;</span><span class="p">:</span> <span class="s1">&#39;binance&#39;</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://api.xypher.io/v1/markets/&#39;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="n">markets</span> <span class="o">=</span> <span class="p">[</span><span class="n">market</span> <span class="k">for</span> <span class="n">market</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;results&#39;</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">markets</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Get how much Bitcoin moved against USDT in the latest 60 minutes</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="c1">#Get how much Bitcoin moved against USDT in the latest 60 minutes.</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;YOUR-KEY&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;market&#39;</span><span class="p">:</span> <span class="s1">&#39;BTCUSDT&#39;</span><span class="p">,</span> <span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="mi">60</span><span class="p">}</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;http://api.xypher.io/v1/mm/&#39;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 
 
