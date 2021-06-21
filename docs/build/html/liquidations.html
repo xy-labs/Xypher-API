@@ -188,11 +188,11 @@
 <td><p>String</p></td>
 <td><p>NO</p></td>
 </tr>
-<tr class="row-odd"><td><p>StartDate</p></td>
+<tr class="row-odd"><td><p>start_date</p></td>
 <td><p>INT</p></td>
 <td><p>NO</p></td>
 </tr>
-<tr class="row-even"><td><p>EndDate</p></td>
+<tr class="row-even"><td><p>end_date</p></td>
 <td><p>INT</p></td>
 <td><p>NO</p></td>
 </tr>
@@ -200,11 +200,11 @@
 <td><p>Float</p></td>
 <td><p>NO</p></td>
 </tr>
-<tr class="row-even"><td><p>Exchange</p></td>
+<tr class="row-even"><td><p>exchange</p></td>
 <td><p>String</p></td>
 <td><p>NO</p></td>
 </tr>
-<tr class="row-odd"><td><p>Side</p></td>
+<tr class="row-odd"><td><p>side</p></td>
 <td><p>String</p></td>
 <td><p>NO</p></td>
 </tr>
@@ -228,14 +228,14 @@
 </table>
 <p><strong>market:</strong> Query liquidations data for a specific market <code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;market=&lt;MARKET&gt;</span></code>.
 THE ACCEPTED MARKET FORMAT IS COINPAIR: SO XBTUSDT, ETHUSDT and so on</p>
-<p><strong>StartDate:</strong> Get all the data after a specif timestamp, an integer unix timestamp must be provided.
-<code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;StartDate=&lt;MARKET&gt;</span></code>.</p>
-<p><strong>EndDate:</strong> Get all the data before a specif timestamp, an integer unix timestamp must be provided.
-<code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;EndDate=&lt;MARKET&gt;</span></code>.</p>
+<p><strong>start_date:</strong> Get all the data after a specif timestamp, an integer unix timestamp must be provided.
+<code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;start_date=&lt;MARKET&gt;</span></code>.</p>
+<p><strong>end_date:</strong> Get all the data before a specif timestamp, an integer unix timestamp must be provided.
+<code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;end_date=&lt;MARKET&gt;</span></code>.</p>
 <p><strong>amount:</strong> Get all the liquidations where the amount is bigger than the provided amount. Must be a float
 <code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;amount=&lt;MARKET&gt;</span></code>.</p>
-<p><strong>Exchange:</strong> Get all the data from a specific exchange. For now Bitmex and Binance Futures the only available exchange. <code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;exchange=&lt;EXCHANGE&gt;</span></code>. Exchange can be  <code class="code docutils literal notranslate"><span class="pre">bitmex</span></code> or <code class="code docutils literal notranslate"><span class="pre">binance_futures</span></code></p>
-<p><strong>Exchange:</strong> Choose a side. <code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;side=&lt;SIDE&gt;</span></code>. Side can be  <code class="code docutils literal notranslate"><span class="pre">Short</span></code> or <code class="code docutils literal notranslate"><span class="pre">Long</span></code></p>
+<p><strong>exchange:</strong> Get all the data from a specific exchange. For now Bitmex and Binance Futures the only available exchange. <code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;exchange=&lt;EXCHANGE&gt;</span></code>. Exchange can be  <code class="code docutils literal notranslate"><span class="pre">bitmex</span></code> or <code class="code docutils literal notranslate"><span class="pre">binance_futures</span></code></p>
+<p><strong>side:</strong> Choose a side. <code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;side=&lt;SIDE&gt;</span></code>. Side can be  <code class="code docutils literal notranslate"><span class="pre">Short</span></code> or <code class="code docutils literal notranslate"><span class="pre">Long</span></code></p>
 <p><strong>above_amount:</strong> Get all liquidations above a specified amount. <code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;above_amount=&lt;AMOUNT&gt;</span></code>.</p>
 <p><strong>below_amount:</strong> Get all liquidations above a specified amount. <code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;below_amount=&lt;AMOUNT&gt;</span></code>.</p>
 <p><strong>above_price:</strong> Get all liquidations above a specified price. <code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;above_price=&lt;PRICE&gt;</span></code>.</p>

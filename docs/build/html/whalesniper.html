@@ -39,7 +39,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Liquidations" href="liquidations.html" />
-    <link rel="prev" title="Authentication" href="auth.html" /> 
+    <link rel="prev" title="Authentication &amp; Pagination" href="auth.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -87,7 +87,7 @@
               <p class="caption"><span class="caption-text">Contents</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact us &amp; support</a></li>
-<li class="toctree-l1"><a class="reference internal" href="auth.html">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auth.html">Authentication &amp; Pagination</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Endpoints</span></p>
 <ul class="current">
@@ -188,31 +188,31 @@
 <td><p>String</p></td>
 <td><p>NO</p></td>
 </tr>
-<tr class="row-odd"><td><p>StartDate</p></td>
+<tr class="row-odd"><td><p>start_date</p></td>
 <td><p>INT</p></td>
 <td><p>NO</p></td>
 </tr>
-<tr class="row-even"><td><p>EndDate</p></td>
+<tr class="row-even"><td><p>end_date</p></td>
 <td><p>INT</p></td>
 <td><p>NO</p></td>
 </tr>
-<tr class="row-odd"><td><p>Amount</p></td>
+<tr class="row-odd"><td><p>amount</p></td>
 <td><p>Float</p></td>
 <td><p>NO</p></td>
 </tr>
-<tr class="row-even"><td><p>Pair</p></td>
+<tr class="row-even"><td><p>pair</p></td>
 <td><p>String</p></td>
 <td><p>NO</p></td>
 </tr>
-<tr class="row-odd"><td><p>Coin</p></td>
+<tr class="row-odd"><td><p>coin</p></td>
 <td><p>String</p></td>
 <td><p>NO</p></td>
 </tr>
-<tr class="row-even"><td><p>Exchange</p></td>
+<tr class="row-even"><td><p>exchange</p></td>
 <td><p>String</p></td>
 <td><p>NO</p></td>
 </tr>
-<tr class="row-odd"><td><p>Trend</p></td>
+<tr class="row-odd"><td><p>trend</p></td>
 <td><p>String</p></td>
 <td><p>NO</p></td>
 </tr>
@@ -220,18 +220,18 @@
 </table>
 <p><strong>market:</strong> Query WhaleSniper signals for a specific market <code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR_KEY&gt;&amp;market=&lt;MARKET&gt;</span></code>.
 THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on</p>
-<p><strong>StartDate:</strong> Get all the signals after a specif timestamp, an integer unix timestamp must be provided.
-<code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR_KEY&gt;&amp;StartDate=&lt;MARKET&gt;</span></code>.</p>
-<p><strong>EndDate:</strong> Get all the signals before a specif timestamp, an integer unix timestamp must be provided.
-<code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR_KEY&gt;&amp;EndDate=&lt;MARKET&gt;</span></code>.</p>
-<p><strong>Amount:</strong> Get all the signals where the amount is bigger than the provided amount. Must be a float
+<p><strong>start_date:</strong> Get all the signals after a specif timestamp, an integer unix timestamp must be provided.
+<code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR_KEY&gt;&amp;start_date=&lt;MARKET&gt;</span></code>.</p>
+<p><strong>end_date:</strong> Get all the signals before a specif timestamp, an integer unix timestamp must be provided.
+<code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR_KEY&gt;&amp;end_date=&lt;MARKET&gt;</span></code>.</p>
+<p><strong>amount:</strong> Get all the signals where the amount is bigger than the provided amount. Must be a float
 <code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR_KEY&gt;&amp;amount=&lt;MARKET&gt;</span></code>.</p>
-<p><strong>Pair:</strong> Get all the signals for a specific pair
+<p><strong>pair:</strong> Get all the signals for a specific pair
 <code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR_KEY&gt;&amp;pair=&lt;MARKET&gt;</span></code>.</p>
 <p><strong>Coin:</strong> Get all the signals for a specific coin across all the possible pairs
 <code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR_KEY&gt;&amp;coin=&lt;MARKET&gt;</span></code>.</p>
-<p><strong>Exchange:</strong> Get all the signals from a specific exchange. Available exchanges: Binance, Bitmex, Binance Futures, Bittrex, Huobi. <code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR_KEY&gt;&amp;exchange=&lt;MARKET&gt;</span></code>.</p>
-<p><strong>Trend:</strong> Get all the signals with a specific direction: trend or bull.
+<p><strong>exchange:</strong> Get all the signals from a specific exchange. Available exchanges: Binance, Bitmex, Binance Futures, Bittrex, Huobi. <code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR_KEY&gt;&amp;exchange=&lt;MARKET&gt;</span></code>.</p>
+<p><strong>trend:</strong> Get all the signals with a specific direction: trend or bull.
 <code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR_KEY&gt;&amp;trend=&lt;bear/bull&gt;</span></code>.</p>
 <p><strong>Example:</strong> <code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR-KEY&gt;&amp;market=BTCUSDT&amp;exchange=binance</span></code>.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;count&quot;</span><span class="p">:</span><span class="mi">127</span><span class="p">,</span><span class="nt">&quot;next&quot;</span><span class="p">:</span><span class="s2">&quot;http://51.79.25.135/v1/whalesniper/?exchange=binance&amp;key=&lt;YOUR-KEY&gt;&amp;market=BTCUSDT&amp;page=2&quot;</span><span class="p">,</span><span class="nt">&quot;previous&quot;</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span><span class="nt">&quot;results&quot;</span><span class="p">:[{</span><span class="nt">&quot;market&quot;</span><span class="p">:</span><span class="s2">&quot;BTCUSDT&quot;</span><span class="p">,</span><span class="nt">&quot;pair&quot;</span><span class="p">:</span><span class="s2">&quot;USDT&quot;</span><span class="p">,</span><span class="nt">&quot;coin&quot;</span><span class="p">:</span><span class="s2">&quot;BTC&quot;</span><span class="p">,</span><span class="nt">&quot;exchange&quot;</span><span class="p">:</span><span class="s2">&quot;Binance&quot;</span><span class="p">,</span><span class="nt">&quot;oldAsk&quot;</span><span class="p">:</span><span class="s2">&quot;39497.92&quot;</span><span class="p">,</span><span class="nt">&quot;newAsk&quot;</span><span class="p">:</span><span class="s2">&quot;41971.71&quot;</span><span class="p">,</span><span class="nt">&quot;oldBid&quot;</span><span class="p">:</span><span class="s2">&quot;39484.25&quot;</span><span class="p">,</span><span class="nt">&quot;newBid&quot;</span><span class="p">:</span><span class="s2">&quot;41955.92&quot;</span><span class="p">,</span><span class="nt">&quot;oldVol&quot;</span><span class="p">:</span><span class="s2">&quot;2847768300.27&quot;</span><span class="p">,</span><span class="nt">&quot;newVol&quot;</span><span class="p">:</span><span class="s2">&quot;3163939815.24&quot;</span><span class="p">,</span><span class="nt">&quot;volDiff&quot;</span><span class="p">:</span><span class="s2">&quot;11&quot;</span><span class="p">,</span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="s2">&quot;316171514.97&quot;</span><span class="p">,</span><span class="nt">&quot;oldUnix&quot;</span><span class="p">:</span><span class="s2">&quot;1612788200&quot;</span><span class="p">,</span><span class="nt">&quot;newUnix&quot;</span><span class="p">:</span><span class="s2">&quot;1612788879&quot;</span><span class="p">,</span><span class="nt">&quot;trend&quot;</span><span class="p">:</span><span class="s2">&quot;bull&quot;</span><span class="p">},{</span><span class="nt">&quot;market&quot;</span><span class="p">:</span><span class="s2">&quot;BTCUSDT&quot;</span><span class="p">,</span><span class="nt">&quot;pair&quot;</span><span class="p">:</span><span class="s2">&quot;USDT&quot;</span><span class="p">,</span><span class="nt">&quot;coin&quot;</span><span class="p">:</span><span class="s2">&quot;BTC&quot;</span><span class="p">,</span><span class="nt">&quot;exchange&quot;</span><span class="p">:</span><span class="s2">&quot;Binance&quot;</span><span class="p">,</span><span class="nt">&quot;oldAsk&quot;</span><span class="p">:</span><span class="s2">&quot;33695.39&quot;</span><span class="p">,</span><span class="nt">&quot;newAsk&quot;</span><span class="p">:</span><span class="s2">&quot;36831.52&quot;</span><span class="p">,</span><span class="nt">&quot;oldBid&quot;</span><span class="p">:</span><span class="s2">&quot;33695.38&quot;</span><span class="p">,</span><span class="nt">&quot;newBid&quot;</span><span class="p">:</span><span class="s2">&quot;36821.91&quot;</span><span class="p">,</span><span class="nt">&quot;oldVol&quot;</span><span class="p">:</span><span class="s2">&quot;4158620050.73&quot;</span><span class="p">,</span><span class="nt">&quot;newVol&quot;</span><span class="p">:</span><span class="s2">&quot;4616238341.94&quot;</span><span class="p">,</span><span class="nt">&quot;volDiff&quot;</span><span class="p">:</span><span class="s2">&quot;11&quot;</span><span class="p">,</span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="s2">&quot;457618291.21&quot;</span><span class="p">,</span><span class="nt">&quot;oldUnix&quot;</span><span class="p">:</span><span class="s2">&quot;1611910065&quot;</span><span class="p">,</span><span class="nt">&quot;newUnix&quot;</span><span class="p">:</span><span class="s2">&quot;1611910930&quot;</span><span class="p">,</span><span class="nt">&quot;trend&quot;</span><span class="p">:</span><span class="s2">&quot;bull&quot;</span><span class="p">}]}</span>
@@ -246,7 +246,7 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on</
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="liquidations.html" class="btn btn-neutral float-right" title="Liquidations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="auth.html" class="btn btn-neutral float-left" title="Authentication" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="auth.html" class="btn btn-neutral float-left" title="Authentication &amp; Pagination" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

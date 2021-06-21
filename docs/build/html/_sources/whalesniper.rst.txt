@@ -17,19 +17,19 @@ Get Whalesniper signals.
 +============+============+===========+
 | market     | String     |    NO     |
 +------------+------------+-----------+
-| StartDate  | INT        |    NO     |
+| start_date | INT        |    NO     |
 +------------+------------+-----------+
-| EndDate    | INT        |    NO     |
+| end_date   | INT        |    NO     |
 +------------+------------+-----------+
-| Amount     | Float      |    NO     |
+| amount     | Float      |    NO     |
 +------------+------------+-----------+
-| Pair       | String     |    NO     |
+| pair       | String     |    NO     |
 +------------+------------+-----------+
-| Coin       | String     |    NO     |
+| coin       | String     |    NO     |
 +------------+------------+-----------+
-| Exchange   | String     |    NO     |
+| exchange   | String     |    NO     |
 +------------+------------+-----------+
-| Trend      | String     |    NO     |
+| trend      | String     |    NO     |
 +------------+------------+-----------+
 
 
@@ -37,24 +37,24 @@ Get Whalesniper signals.
 **market:** Query WhaleSniper signals for a specific market :code:`/v1/whalesniper/?key=<YOUR_KEY>&market=<MARKET>`.
 THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on
 
-**StartDate:** Get all the signals after a specif timestamp, an integer unix timestamp must be provided.
-:code:`/v1/whalesniper/?key=<YOUR_KEY>&StartDate=<MARKET>`.
+**start_date:** Get all the signals after a specif timestamp, an integer unix timestamp must be provided.
+:code:`/v1/whalesniper/?key=<YOUR_KEY>&start_date=<MARKET>`.
 
-**EndDate:** Get all the signals before a specif timestamp, an integer unix timestamp must be provided.
-:code:`/v1/whalesniper/?key=<YOUR_KEY>&EndDate=<MARKET>`.
+**end_date:** Get all the signals before a specif timestamp, an integer unix timestamp must be provided.
+:code:`/v1/whalesniper/?key=<YOUR_KEY>&end_date=<MARKET>`.
 
-**Amount:** Get all the signals where the amount is bigger than the provided amount. Must be a float 
+**amount:** Get all the signals where the amount is bigger than the provided amount. Must be a float 
 :code:`/v1/whalesniper/?key=<YOUR_KEY>&amount=<MARKET>`.
 
-**Pair:** Get all the signals for a specific pair
+**pair:** Get all the signals for a specific pair
 :code:`/v1/whalesniper/?key=<YOUR_KEY>&pair=<MARKET>`.
 
 **Coin:** Get all the signals for a specific coin across all the possible pairs
 :code:`/v1/whalesniper/?key=<YOUR_KEY>&coin=<MARKET>`.
 
-**Exchange:** Get all the signals from a specific exchange. Available exchanges: Binance, Bitmex, Binance Futures, Bittrex, Huobi. :code:`/v1/whalesniper/?key=<YOUR_KEY>&exchange=<MARKET>`.
+**exchange:** Get all the signals from a specific exchange. Available exchanges: Binance, Bitmex, Binance Futures, Bittrex, Huobi. :code:`/v1/whalesniper/?key=<YOUR_KEY>&exchange=<MARKET>`.
 
-**Trend:** Get all the signals with a specific direction: trend or bull.
+**trend:** Get all the signals with a specific direction: trend or bull.
 :code:`/v1/whalesniper/?key=<YOUR_KEY>&trend=<bear/bull>`.
 
 **Example:** :code:`/v1/whalesniper/?key=<YOUR-KEY>&market=BTCUSDT&exchange=binance`.

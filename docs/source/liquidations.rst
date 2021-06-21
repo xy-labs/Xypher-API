@@ -15,15 +15,15 @@ Get liquidations data from Binance Futures and Bitmex
 +============+============+===========+
 | market     | String     |    NO     |
 +------------+------------+-----------+
-| StartDate  | INT        |    NO     |
+| start_date | INT        |    NO     |
 +------------+------------+-----------+
-| EndDate    | INT        |    NO     |
+| end_date   | INT        |    NO     |
 +------------+------------+-----------+
 | amount     | Float      |    NO     |
 +------------+------------+-----------+
-| Exchange   | String     |    NO     |
+| exchange   | String     |    NO     |
 +------------+------------+-----------+
-| Side       | String     |    NO     |
+| side       | String     |    NO     |
 +------------+------------+-----------+
 |above_amount| Float      |    NO     |
 +------------+------------+-----------+
@@ -39,18 +39,18 @@ Get liquidations data from Binance Futures and Bitmex
 **market:** Query liquidations data for a specific market :code:`/v1/liquidations/?key=<YOUR_KEY>&market=<MARKET>`.
 THE ACCEPTED MARKET FORMAT IS COINPAIR: SO XBTUSDT, ETHUSDT and so on
 
-**StartDate:** Get all the data after a specif timestamp, an integer unix timestamp must be provided.
-:code:`/v1/liquidations/?key=<YOUR_KEY>&StartDate=<MARKET>`.
+**start_date:** Get all the data after a specif timestamp, an integer unix timestamp must be provided.
+:code:`/v1/liquidations/?key=<YOUR_KEY>&start_date=<MARKET>`.
 
-**EndDate:** Get all the data before a specif timestamp, an integer unix timestamp must be provided.
-:code:`/v1/liquidations/?key=<YOUR_KEY>&EndDate=<MARKET>`.
+**end_date:** Get all the data before a specif timestamp, an integer unix timestamp must be provided.
+:code:`/v1/liquidations/?key=<YOUR_KEY>&end_date=<MARKET>`.
 
 **amount:** Get all the liquidations where the amount is bigger than the provided amount. Must be a float 
 :code:`/v1/liquidations/?key=<YOUR_KEY>&amount=<MARKET>`.
 
-**Exchange:** Get all the data from a specific exchange. For now Bitmex and Binance Futures the only available exchange. :code:`/v1/liquidations/?key=<YOUR_KEY>&exchange=<EXCHANGE>`. Exchange can be  :code:`bitmex` or :code:`binance_futures`
+**exchange:** Get all the data from a specific exchange. For now Bitmex and Binance Futures the only available exchange. :code:`/v1/liquidations/?key=<YOUR_KEY>&exchange=<EXCHANGE>`. Exchange can be  :code:`bitmex` or :code:`binance_futures`
 
-**Exchange:** Choose a side. :code:`/v1/liquidations/?key=<YOUR_KEY>&side=<SIDE>`. Side can be  :code:`Short` or :code:`Long`
+**side:** Choose a side. :code:`/v1/liquidations/?key=<YOUR_KEY>&side=<SIDE>`. Side can be  :code:`Short` or :code:`Long`
 
 **above_amount:** Get all liquidations above a specified amount. :code:`/v1/liquidations/?key=<YOUR_KEY>&above_amount=<AMOUNT>`.
 

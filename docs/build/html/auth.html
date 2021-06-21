@@ -176,7 +176,7 @@
 <p><strong>Make sure to send any request over HTTPS, else your request will be ignored.</strong></p>
 <div class="section" id="pagination">
 <h2>Pagination<a class="headerlink" href="#pagination" title="Permalink to this headline">¶</a></h2>
-<p>The API uses pagination. For the Whalesniper and Liquidations endpoints the default page is 100 records when no market is provided, 200 records for each page when a market is provided. For the Walls endpoint each page holds 200 records.</p>
+<p>The API uses pagination. By default, each page is 50 records long.</p>
 <p>In order to navigate across the pages, add a <code class="code docutils literal notranslate"><span class="pre">page</span></code> parameter to your GET request. <strong>Example:</strong>
 <code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR-KEY&gt;&amp;market=BTCUSDT&amp;page=2</span></code></p>
 <p>The API is still in experimental phase, so these settings may change in the future.</p>

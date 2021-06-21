@@ -20,9 +20,9 @@ Get orderbook walls data.
 +------------+------------+-----------+
 | timeframe  | String     |    YES    |
 +------------+------------+-----------+
-| StartDate  | INT        |    NO     |
+| start_date | INT        |    NO     |
 +------------+------------+-----------+
-| EndDate    | INT        |    NO     |
+| end_date   | INT        |    NO     |
 +------------+------------+-----------+
 |above_amount| Float      |    NO     |
 +------------+------------+-----------+
@@ -34,7 +34,6 @@ Get orderbook walls data.
 +------------+------------+-----------+
 
 
-
 **market (MANDATORY):** Get walls for a specific market :code:`/v1/hmc/?key=<YOUR_KEY>&market=<MARKET>`.
 THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on
 
@@ -43,11 +42,11 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on
 **timeframe (MANDATORY):** Choose a timeframe. Available timeframes: 5m, 30m. :code:`/v1/hmc/?key=<YOUR_KEY>&timeframe=<TIMEFRAME>`.
 
 
-**StartDate:** Get all the data after a specif timestamp, an integer unix timestamp must be provided.
-:code:`/v1/hmc/?key=<YOUR_KEY>&StartDate=<MARKET>`.
+**start_date:** Get all the data after a specif timestamp, an integer unix timestamp must be provided.
+:code:`/v1/hmc/?key=<YOUR_KEY>&start_date=<MARKET>`.
 
-**EndDate:** Get all the data before a specif timestamp, an integer unix timestamp must be provided.
-:code:`/v1/hmc/?key=<YOUR_KEY>&EndDate=<MARKET>`.
+**end_date:** Get all the data before a specif timestamp, an integer unix timestamp must be provided.
+:code:`/v1/hmc/?key=<YOUR_KEY>&end_date=<MARKET>`.
 
 **above_amount:** Get all liquidations above a specified amount. :code:`/v1/hmc/?key=<YOUR_KEY>&above_amount=<AMOUNT>`.
 
