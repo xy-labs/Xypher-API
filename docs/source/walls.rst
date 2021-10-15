@@ -1,7 +1,7 @@
 Walls
 ==================
 
-Get orderbook walls data.
+Get orderbook walls data. Available exchanges: Binance, Combined (FTX + Binance + Binance Futures + Bitmex)
 
 
 
@@ -37,7 +37,7 @@ Get orderbook walls data.
 **market (MANDATORY):** Get walls for a specific market :code:`/v1/hmc/?key=<YOUR_KEY>&market=<MARKET>`.
 THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on
 
-**exchange (MANDATORY):** Choose an exchange. Available exchanges: Binance, Combined (FTX + Binance + Binance Futures + Bitmex) :code:`/v1/hmc/?key=<YOUR_KEY>&exchange=<EXCHANGE>`.
+**exchange (MANDATORY):** Choose an exchange. :code:`/v1/hmc/?key=<YOUR_KEY>&exchange=<EXCHANGE>`.
 
 **timeframe (MANDATORY):** Choose a timeframe. Available timeframes: 5m, 30m. :code:`/v1/hmc/?key=<YOUR_KEY>&timeframe=<TIMEFRAME>`.
 

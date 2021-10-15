@@ -87,7 +87,7 @@
               <p class="caption"><span class="caption-text">Contents</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact us &amp; support</a></li>
-<li class="toctree-l1"><a class="reference internal" href="auth.html">Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auth.html">Authentication &amp; Pagination</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Endpoints</span></p>
 <ul class="current">
@@ -170,7 +170,7 @@
             
   <div class="section" id="markets">
 <h1>Markets<a class="headerlink" href="#markets" title="Permalink to this headline">¶</a></h1>
-<p>Get Technical Analysis data, used for the /TA command on XypherianBot, and volume data used for the Volume Screener hosted at Xypher.io.</p>
+<p>Get Technical Analysis data, used for the /TA command on XypherianBot, and volume data used for the Volume Screener hosted at Xypher.io. Available exchanges: Binance, Bitmex, Bittrex, Huobi.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>GET /v1/markets/?key=&lt;YOUR_KEY&gt;
 </pre></div>
 </div>
@@ -216,7 +216,7 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on</
 <code class="code docutils literal notranslate"><span class="pre">/v1/markets/?key=&lt;YOUR_KEY&gt;&amp;pair=&lt;MARKET&gt;</span></code>.</p>
 <p><strong>coin:</strong> Get all the data for a specific coin across all the possible pairs
 <code class="code docutils literal notranslate"><span class="pre">/v1/markets/?key=&lt;YOUR_KEY&gt;&amp;coin=&lt;MARKET&gt;</span></code>.</p>
-<p><strong>exchange:</strong> Get a specific exchange. Available exchanges: Binance, Bitmex, Bittrex, Huobi. <code class="code docutils literal notranslate"><span class="pre">/v1/markets/?key=&lt;YOUR_KEY&gt;&amp;exchange=&lt;MARKET&gt;</span></code>.</p>
+<p><strong>exchange:</strong> Get a specific exchange. <code class="code docutils literal notranslate"><span class="pre">/v1/markets/?key=&lt;YOUR_KEY&gt;&amp;exchange=&lt;MARKET&gt;</span></code>.</p>
 <p><strong>volume:</strong> Get all markets with an higher volume than provided.
 <code class="code docutils literal notranslate"><span class="pre">/v1/markets/?key=&lt;YOUR_KEY&gt;&amp;volume=&lt;VOLUME&gt;</span></code>.</p>
 <div class="section" id="technical-analysis">

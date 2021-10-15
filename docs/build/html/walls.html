@@ -166,7 +166,7 @@
             
   <div class="section" id="walls">
 <h1>Walls<a class="headerlink" href="#walls" title="Permalink to this headline">¶</a></h1>
-<p>Get orderbook walls data.</p>
+<p>Get orderbook walls data. Available exchanges: Binance, Combined (FTX + Binance + Binance Futures + Bitmex)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>GET /v1/hmc/?key=&lt;YOUR_KEY&gt;
 </pre></div>
 </div>
@@ -224,7 +224,7 @@
 </table>
 <p><strong>market (MANDATORY):</strong> Get walls for a specific market <code class="code docutils literal notranslate"><span class="pre">/v1/hmc/?key=&lt;YOUR_KEY&gt;&amp;market=&lt;MARKET&gt;</span></code>.
 THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on</p>
-<p><strong>exchange (MANDATORY):</strong> Choose an exchange. Available exchanges: Binance, Combined (FTX + Binance + Binance Futures + Bitmex) <code class="code docutils literal notranslate"><span class="pre">/v1/hmc/?key=&lt;YOUR_KEY&gt;&amp;exchange=&lt;EXCHANGE&gt;</span></code>.</p>
+<p><strong>exchange (MANDATORY):</strong> Choose an exchange. <code class="code docutils literal notranslate"><span class="pre">/v1/hmc/?key=&lt;YOUR_KEY&gt;&amp;exchange=&lt;EXCHANGE&gt;</span></code>.</p>
 <p><strong>timeframe (MANDATORY):</strong> Choose a timeframe. Available timeframes: 5m, 30m. <code class="code docutils literal notranslate"><span class="pre">/v1/hmc/?key=&lt;YOUR_KEY&gt;&amp;timeframe=&lt;TIMEFRAME&gt;</span></code>.</p>
 <p><strong>start_date:</strong> Get all the data after a specif timestamp, an integer unix timestamp must be provided.
 <code class="code docutils literal notranslate"><span class="pre">/v1/hmc/?key=&lt;YOUR_KEY&gt;&amp;start_date=&lt;MARKET&gt;</span></code>.</p>

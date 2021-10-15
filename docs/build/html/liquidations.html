@@ -166,7 +166,7 @@
             
   <div class="section" id="liquidations">
 <h1>Liquidations<a class="headerlink" href="#liquidations" title="Permalink to this headline">¶</a></h1>
-<p>Get liquidations data from Binance Futures and Bitmex</p>
+<p>Get liquidations data from Binance Futures and Bitmex.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>GET /v1/liquidations/?key=&lt;YOUR_KEY&gt;
 </pre></div>
 </div>
@@ -234,7 +234,7 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO XBTUSDT, ETHUSDT and so on</p>
 <code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;end_date=&lt;MARKET&gt;</span></code>.</p>
 <p><strong>amount:</strong> Get all the liquidations where the amount is bigger than the provided amount. Must be a float
 <code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;amount=&lt;MARKET&gt;</span></code>.</p>
-<p><strong>exchange:</strong> Get all the data from a specific exchange. For now Bitmex and Binance Futures the only available exchange. <code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;exchange=&lt;EXCHANGE&gt;</span></code>. Exchange can be  <code class="code docutils literal notranslate"><span class="pre">bitmex</span></code> or <code class="code docutils literal notranslate"><span class="pre">binance_futures</span></code></p>
+<p><strong>exchange:</strong> Get all the data from a specific exchange. <code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;exchange=&lt;EXCHANGE&gt;</span></code>. Exchange can be  <code class="code docutils literal notranslate"><span class="pre">bitmex</span></code> or <code class="code docutils literal notranslate"><span class="pre">binance_futures</span></code></p>
 <p><strong>side:</strong> Choose a side. <code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;side=&lt;SIDE&gt;</span></code>. Side can be  <code class="code docutils literal notranslate"><span class="pre">Short</span></code> or <code class="code docutils literal notranslate"><span class="pre">Long</span></code></p>
 <p><strong>above_amount:</strong> Get all liquidations above a specified amount. <code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;above_amount=&lt;AMOUNT&gt;</span></code>.</p>
 <p><strong>below_amount:</strong> Get all liquidations above a specified amount. <code class="code docutils literal notranslate"><span class="pre">/v1/liquidations/?key=&lt;YOUR_KEY&gt;&amp;below_amount=&lt;AMOUNT&gt;</span></code>.</p>
