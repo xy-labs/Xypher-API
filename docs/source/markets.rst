@@ -136,9 +136,10 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on
 **EXAMPLE:** :code:`/v1/markets/?key=<YOUR_KEY>&pair=BTCUSDT`.
 
 
-**RESPONSE**
+**RESPONSE:**
 
 .. code-block:: json
+
 	{
 	  "market": "ZRXUSDT",
 	  "pair": "USDT",

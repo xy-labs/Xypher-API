@@ -59,6 +59,8 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on
 
 **Example:** :code:`/v1/whalesniper/?key=<YOUR-KEY>&market=BTCUSDT&exchange=binance`.
 
+**RESPONSE:**
+
 .. code-block:: json
 
 	{
@@ -103,7 +105,6 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on
 	  ]
 	}
 
-**RESPONSE**
 
 **Market:** name of the market.
 

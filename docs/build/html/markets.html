@@ -323,7 +323,131 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on</
 <p><strong>volume:</strong> Get all markets with an higher volume than provided.
 <code class="code docutils literal notranslate"><span class="pre">/v1/markets/?key=&lt;YOUR_KEY&gt;&amp;volume=&lt;VOLUME&gt;</span></code>.</p>
 <p><strong>EXAMPLE:</strong> <code class="code docutils literal notranslate"><span class="pre">/v1/markets/?key=&lt;YOUR_KEY&gt;&amp;pair=BTCUSDT</span></code>.</p>
-<p><strong>RESPONSE</strong></p>
+<p><strong>RESPONSE:</strong></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;market&quot;</span><span class="p">:</span> <span class="s2">&quot;ZRXUSDT&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;pair&quot;</span><span class="p">:</span> <span class="s2">&quot;USDT&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;exchange&quot;</span><span class="p">:</span> <span class="s2">&quot;Binance&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;ta_5m&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;RSI&quot;</span><span class="p">:</span> <span class="mi">59</span><span class="p">,</span>
+    <span class="nt">&quot;MFI&quot;</span><span class="p">:</span> <span class="mi">53</span><span class="p">,</span>
+    <span class="nt">&quot;STOCH_K&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="nt">&quot;STOCH_D&quot;</span><span class="p">:</span> <span class="mi">28</span><span class="p">,</span>
+    <span class="nt">&quot;PSAR&quot;</span><span class="p">:</span> <span class="mf">0.9687201333280001</span><span class="p">,</span>
+    <span class="nt">&quot;MACD_L&quot;</span><span class="p">:</span> <span class="mf">0.00242937</span><span class="p">,</span>
+    <span class="nt">&quot;MACD_H&quot;</span><span class="p">:</span> <span class="mf">-0.00029107</span><span class="p">,</span>
+    <span class="nt">&quot;MACD_S&quot;</span><span class="p">:</span> <span class="mf">0.00272044</span><span class="p">,</span>
+    <span class="nt">&quot;ADX&quot;</span><span class="p">:</span> <span class="mf">26.04</span><span class="p">,</span>
+    <span class="nt">&quot;ADX_P&quot;</span><span class="p">:</span> <span class="mf">23.96</span><span class="p">,</span>
+    <span class="nt">&quot;ADX_M&quot;</span><span class="p">:</span> <span class="mf">18.51</span><span class="p">,</span>
+    <span class="nt">&quot;CCI&quot;</span><span class="p">:</span> <span class="mi">31</span><span class="p">,</span>
+    <span class="nt">&quot;WR&quot;</span><span class="p">:</span> <span class="mi">-34</span><span class="p">,</span>
+    <span class="nt">&quot;SMA_10&quot;</span><span class="p">:</span> <span class="mf">0.9721</span><span class="p">,</span>
+    <span class="nt">&quot;SMA_25&quot;</span><span class="p">:</span> <span class="mf">0.9693</span><span class="p">,</span>
+    <span class="nt">&quot;SMA_50&quot;</span><span class="p">:</span> <span class="mf">0.9642</span><span class="p">,</span>
+    <span class="nt">&quot;SMA_100&quot;</span><span class="p">:</span> <span class="mf">0.9654</span><span class="p">,</span>
+    <span class="nt">&quot;SMA_200&quot;</span><span class="p">:</span> <span class="mf">0.9723</span><span class="p">,</span>
+    <span class="nt">&quot;EMA_10&quot;</span><span class="p">:</span> <span class="mf">0.9719</span><span class="p">,</span>
+    <span class="nt">&quot;EMA_25&quot;</span><span class="p">:</span> <span class="mf">0.9694</span><span class="p">,</span>
+    <span class="nt">&quot;EMA_50&quot;</span><span class="p">:</span> <span class="mf">0.9671</span><span class="p">,</span>
+    <span class="nt">&quot;EMA_100&quot;</span><span class="p">:</span> <span class="mf">0.9677</span><span class="p">,</span>
+    <span class="nt">&quot;EMA_200&quot;</span><span class="p">:</span> <span class="mf">0.9723</span><span class="p">,</span>
+    <span class="nt">&quot;TS&quot;</span><span class="p">:</span> <span class="mi">1634591866</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;ta_30m&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;RSI&quot;</span><span class="p">:</span> <span class="mi">52</span><span class="p">,</span>
+    <span class="nt">&quot;MFI&quot;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span>
+    <span class="nt">&quot;STOCH_K&quot;</span><span class="p">:</span> <span class="mi">97</span><span class="p">,</span>
+    <span class="nt">&quot;STOCH_D&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+    <span class="nt">&quot;PSAR&quot;</span><span class="p">:</span> <span class="mf">0.9540751600000001</span><span class="p">,</span>
+    <span class="nt">&quot;MACD_L&quot;</span><span class="p">:</span> <span class="mf">-0.00222698</span><span class="p">,</span>
+    <span class="nt">&quot;MACD_H&quot;</span><span class="p">:</span> <span class="mf">0.00190293</span><span class="p">,</span>
+    <span class="nt">&quot;MACD_S&quot;</span><span class="p">:</span> <span class="mf">-0.00412991</span><span class="p">,</span>
+    <span class="nt">&quot;ADX&quot;</span><span class="p">:</span> <span class="mf">24.61</span><span class="p">,</span>
+    <span class="nt">&quot;ADX_P&quot;</span><span class="p">:</span> <span class="mf">18.85</span><span class="p">,</span>
+    <span class="nt">&quot;ADX_M&quot;</span><span class="p">:</span> <span class="mf">22.18</span><span class="p">,</span>
+    <span class="nt">&quot;CCI&quot;</span><span class="p">:</span> <span class="mi">108</span><span class="p">,</span>
+    <span class="nt">&quot;WR&quot;</span><span class="p">:</span> <span class="mi">-10</span><span class="p">,</span>
+    <span class="nt">&quot;SMA_10&quot;</span><span class="p">:</span> <span class="mf">0.9648</span><span class="p">,</span>
+    <span class="nt">&quot;SMA_25&quot;</span><span class="p">:</span> <span class="mf">0.9681</span><span class="p">,</span>
+    <span class="nt">&quot;SMA_50&quot;</span><span class="p">:</span> <span class="mf">0.9758</span><span class="p">,</span>
+    <span class="nt">&quot;SMA_100&quot;</span><span class="p">:</span> <span class="mf">0.9897</span><span class="p">,</span>
+    <span class="nt">&quot;SMA_200&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;EMA_10&quot;</span><span class="p">:</span> <span class="mf">0.968</span><span class="p">,</span>
+    <span class="nt">&quot;EMA_25&quot;</span><span class="p">:</span> <span class="mf">0.9698</span><span class="p">,</span>
+    <span class="nt">&quot;EMA_50&quot;</span><span class="p">:</span> <span class="mf">0.976</span><span class="p">,</span>
+    <span class="nt">&quot;EMA_100&quot;</span><span class="p">:</span> <span class="mf">0.9855</span><span class="p">,</span>
+    <span class="nt">&quot;EMA_200&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;TS&quot;</span><span class="p">:</span> <span class="mi">1634591866</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;ta_4h&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;RSI&quot;</span><span class="p">:</span> <span class="mi">41</span><span class="p">,</span>
+    <span class="nt">&quot;MFI&quot;</span><span class="p">:</span> <span class="mi">35</span><span class="p">,</span>
+    <span class="nt">&quot;STOCH_K&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
+    <span class="nt">&quot;STOCH_D&quot;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span>
+    <span class="nt">&quot;PSAR&quot;</span><span class="p">:</span> <span class="mf">1.0046019122761851</span><span class="p">,</span>
+    <span class="nt">&quot;MACD_L&quot;</span><span class="p">:</span> <span class="mf">-0.01155876</span><span class="p">,</span>
+    <span class="nt">&quot;MACD_H&quot;</span><span class="p">:</span> <span class="mf">-0.00301035</span><span class="p">,</span>
+    <span class="nt">&quot;MACD_S&quot;</span><span class="p">:</span> <span class="mf">-0.00854841</span><span class="p">,</span>
+    <span class="nt">&quot;ADX&quot;</span><span class="p">:</span> <span class="mf">33.38</span><span class="p">,</span>
+    <span class="nt">&quot;ADX_P&quot;</span><span class="p">:</span> <span class="mf">7.94</span><span class="p">,</span>
+    <span class="nt">&quot;ADX_M&quot;</span><span class="p">:</span> <span class="mf">25.01</span><span class="p">,</span>
+    <span class="nt">&quot;CCI&quot;</span><span class="p">:</span> <span class="mi">-100</span><span class="p">,</span>
+    <span class="nt">&quot;WR&quot;</span><span class="p">:</span> <span class="mi">-69</span><span class="p">,</span>
+    <span class="nt">&quot;SMA_10&quot;</span><span class="p">:</span> <span class="mf">0.9824</span><span class="p">,</span>
+    <span class="nt">&quot;SMA_25&quot;</span><span class="p">:</span> <span class="mf">0.9989</span><span class="p">,</span>
+    <span class="nt">&quot;SMA_50&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;SMA_100&quot;</span><span class="p">:</span> <span class="mf">1.02</span><span class="p">,</span>
+    <span class="nt">&quot;SMA_200&quot;</span><span class="p">:</span> <span class="mf">0.9822</span><span class="p">,</span>
+    <span class="nt">&quot;EMA_10&quot;</span><span class="p">:</span> <span class="mf">0.9811</span><span class="p">,</span>
+    <span class="nt">&quot;EMA_25&quot;</span><span class="p">:</span> <span class="mf">0.9946</span><span class="p">,</span>
+    <span class="nt">&quot;EMA_50&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;EMA_100&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;EMA_200&quot;</span><span class="p">:</span> <span class="mf">0.9829</span><span class="p">,</span>
+    <span class="nt">&quot;TS&quot;</span><span class="p">:</span> <span class="mi">1634591867</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;ta_1d&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;RSI&quot;</span><span class="p">:</span> <span class="mi">45</span><span class="p">,</span>
+    <span class="nt">&quot;MFI&quot;</span><span class="p">:</span> <span class="mi">47</span><span class="p">,</span>
+    <span class="nt">&quot;STOCH_K&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+    <span class="nt">&quot;STOCH_D&quot;</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span>
+    <span class="nt">&quot;PSAR&quot;</span><span class="p">:</span> <span class="mf">1.0292995205801683</span><span class="p">,</span>
+    <span class="nt">&quot;MACD_L&quot;</span><span class="p">:</span> <span class="mf">-0.00229908</span><span class="p">,</span>
+    <span class="nt">&quot;MACD_H&quot;</span><span class="p">:</span> <span class="mf">-0.00461888</span><span class="p">,</span>
+    <span class="nt">&quot;MACD_S&quot;</span><span class="p">:</span> <span class="mf">0.0023198</span><span class="p">,</span>
+    <span class="nt">&quot;ADX&quot;</span><span class="p">:</span> <span class="mf">18.76</span><span class="p">,</span>
+    <span class="nt">&quot;ADX_P&quot;</span><span class="p">:</span> <span class="mf">11.06</span><span class="p">,</span>
+    <span class="nt">&quot;ADX_M&quot;</span><span class="p">:</span> <span class="mf">23.13</span><span class="p">,</span>
+    <span class="nt">&quot;CCI&quot;</span><span class="p">:</span> <span class="mi">-114</span><span class="p">,</span>
+    <span class="nt">&quot;WR&quot;</span><span class="p">:</span> <span class="mi">-80</span><span class="p">,</span>
+    <span class="nt">&quot;SMA_10&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;SMA_25&quot;</span><span class="p">:</span> <span class="mf">1.02</span><span class="p">,</span>
+    <span class="nt">&quot;SMA_50&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;SMA_100&quot;</span><span class="p">:</span> <span class="mf">0.9777</span><span class="p">,</span>
+    <span class="nt">&quot;SMA_200&quot;</span><span class="p">:</span> <span class="mf">1.09</span><span class="p">,</span>
+    <span class="nt">&quot;EMA_10&quot;</span><span class="p">:</span> <span class="mf">1.01</span><span class="p">,</span>
+    <span class="nt">&quot;EMA_25&quot;</span><span class="p">:</span> <span class="mf">1.01</span><span class="p">,</span>
+    <span class="nt">&quot;EMA_50&quot;</span><span class="p">:</span> <span class="mf">1.01</span><span class="p">,</span>
+    <span class="nt">&quot;EMA_100&quot;</span><span class="p">:</span> <span class="mf">1.03</span><span class="p">,</span>
+    <span class="nt">&quot;EMA_200&quot;</span><span class="p">:</span> <span class="mf">1.09</span><span class="p">,</span>
+    <span class="nt">&quot;TS&quot;</span><span class="p">:</span> <span class="mi">1634591868</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;bid&quot;</span><span class="p">:</span> <span class="mf">0.9755</span><span class="p">,</span>
+  <span class="nt">&quot;ask&quot;</span><span class="p">:</span> <span class="mf">0.9763</span><span class="p">,</span>
+  <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="mf">0.9981</span><span class="p">,</span>
+  <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="mf">0.9501</span><span class="p">,</span>
+  <span class="nt">&quot;vol&quot;</span><span class="p">:</span> <span class="mf">3114381.16</span><span class="p">,</span>
+  <span class="nt">&quot;m5_stats&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;buy&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;sell&quot;</span><span class="p">:</span> <span class="mi">0</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;m15_stats&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;buy&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;sell&quot;</span><span class="p">:</span> <span class="mi">0</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <p><strong>Market:</strong> name of the market.</p>
 <p><strong>Pair:</strong> base pair.</p>
 <p><strong>Coin:</strong> base currency.</p>

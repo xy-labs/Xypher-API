@@ -24,7 +24,7 @@ Get how much price moved since a specified timestamp.
 
 **Example:** Check how much did the BITCOIN-USDT market move from 50 minutes ago to now: :code:`/v1/mm/?key=<YOUR_KEY>&market=BTCUSDT&time=50`.
 
-**RESPONSE**
+**RESPONSE:**
 
 .. code-block:: json
 
