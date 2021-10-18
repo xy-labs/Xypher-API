@@ -16,13 +16,13 @@ did that, get your API token. **Important:** don't share your API token as it is
 ********************
 General information
 ********************
-The base endpoint is **https://api.xypher.com/v1/**. The data will always be returned in JSON format.
+The base endpoint is **https://api.xypher.io/v1/**. The data will always be returned in JSON format.
 
 
 ****************
 Limits
 ****************
-The current limit is 70 requests/minute and 7200/hour. Once the limit is violated, a message will be returned. Repeatedly 
+The current limit is 70 requests/minute and 7200/hour. Once the limit is violated, a message will be returned. Repeatedly
 violating limits will result in restrictions to the API.
 
 
@@ -36,7 +36,7 @@ Contents
    contact
    auth
 
-  
+
 
 .. toctree::
    :glob:
@@ -48,4 +48,3 @@ Contents
    markets
    mm
    examples
-   
