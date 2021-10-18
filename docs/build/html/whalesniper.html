@@ -196,38 +196,42 @@
 <td><p>INT</p></td>
 <td><p>NO</p></td>
 </tr>
-<tr class="row-odd"><td><p>pair</p></td>
+<tr class="row-odd"><td><p>limit</p></td>
+<td><p>INT</p></td>
+<td><p>NO</p></td>
+</tr>
+<tr class="row-even"><td><p>pair</p></td>
 <td><p>String</p></td>
 <td><p>NO</p></td>
 </tr>
-<tr class="row-even"><td><p>coin</p></td>
+<tr class="row-odd"><td><p>coin</p></td>
 <td><p>String</p></td>
 <td><p>NO</p></td>
 </tr>
-<tr class="row-odd"><td><p>exchange</p></td>
+<tr class="row-even"><td><p>exchange</p></td>
 <td><p>String</p></td>
 <td><p>NO</p></td>
 </tr>
-<tr class="row-even"><td><p>trend</p></td>
+<tr class="row-odd"><td><p>trend</p></td>
 <td><p>String</p></td>
 <td><p>NO</p></td>
 </tr>
 </tbody>
 </table>
-<p><strong>market:</strong> Query WhaleSniper signals for a specific market <code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR_KEY&gt;&amp;market=&lt;MARKET&gt;</span></code>.
+<p><strong>market:</strong> query WhaleSniper signals for a specific market <code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR_KEY&gt;&amp;market=&lt;MARKET&gt;</span></code>.
 THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on</p>
-<p><strong>start_date:</strong> Get all the signals after a specif timestamp, an integer unix timestamp must be provided.
+<p><strong>start_date:</strong> get all the signals after a specif timestamp, an integer unix timestamp must be provided.
 <code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR_KEY&gt;&amp;start_date=&lt;MARKET&gt;</span></code>.</p>
-<p><strong>end_date:</strong> Get all the signals before a specif timestamp, an integer unix timestamp must be provided.
+<p><strong>end_date:</strong> get all the signals before a specif timestamp, an integer unix timestamp must be provided.
 <code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR_KEY&gt;&amp;end_date=&lt;MARKET&gt;</span></code>.</p>
-<p><strong>amount:</strong> Get all the signals where the amount is bigger than the provided amount. Must be a float
-<code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR_KEY&gt;&amp;amount=&lt;MARKET&gt;</span></code>.</p>
-<p><strong>pair:</strong> Get all the signals for a specific pair
+<p><strong>limit:</strong> specify a number of records to get from the API.
+<code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR_KEY&gt;&amp;limit=&lt;LIMIT&gt;</span></code>.</p>
+<p><strong>pair:</strong> get all the signals for a specific pair
 <code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR_KEY&gt;&amp;pair=&lt;MARKET&gt;</span></code>.</p>
-<p><strong>Coin:</strong> Get all the signals for a specific coin across all the possible pairs
+<p><strong>Coin:</strong> get all the signals for a specific coin across all the possible pairs
 <code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR_KEY&gt;&amp;coin=&lt;MARKET&gt;</span></code>.</p>
-<p><strong>exchange:</strong> Get all the signals from a specific exchange. Huobi. <code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR_KEY&gt;&amp;exchange=&lt;MARKET&gt;</span></code>.</p>
-<p><strong>trend:</strong> Get all the signals with a specific direction: trend or bull.
+<p><strong>exchange:</strong> get all the signals from a specific exchange. Huobi. <code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR_KEY&gt;&amp;exchange=&lt;MARKET&gt;</span></code>.</p>
+<p><strong>trend:</strong> get all the signals with a specific direction: trend or bull.
 <code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR_KEY&gt;&amp;trend=&lt;bear/bull&gt;</span></code>.</p>
 <p><strong>Example:</strong> <code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR-KEY&gt;&amp;market=BTCUSDT&amp;exchange=binance</span></code>.</p>
 <p><strong>RESPONSE</strong></p>
