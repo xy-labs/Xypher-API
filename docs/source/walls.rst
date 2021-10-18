@@ -60,7 +60,27 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on
 
 .. code-block:: json
 
-    {"count":66713,"next":"http://51.79.25.135/v1/hmc/?exchange=binance&key=<YOUR-KEY>&market=BTCUSDT&page=2&timeframe=30m","previous":null,"results":[{"UTCunix":1605025800,"price":15500.0,"amount":257.00074,"candle":"2020-11-10T16:30:00Z", "exchange":null}, {"UTCunix":1605025800,"price":14800.0,"amount":201.75888,"candle":"2020-11-10T16:30:00Z", "exchange":null} ... ]
+	{
+	  "count": 66713,
+	  "next": "http://51.79.25.135/v1/hmc/?exchange=binance&key=<YOUR-KEY>&market=BTCUSDT&page=2&timeframe=30m",
+	  "previous": null,
+	  "results": [
+	    {
+	      "UTCunix": 1605025800,
+	      "price": 15500,
+	      "amount": 257.00074,
+	      "candle": "2020-11-10T16:30:00Z",
+	      "exchange": null
+	    },
+	    {
+	      "UTCunix": 1605025800,
+	      "price": 14800,
+	      "amount": 201.75888,
+	      "candle": "2020-11-10T16:30:00Z",
+	      "exchange": null
+	    }
+	  ]
+	}
 
 **UTCunix:** It's the specific timestamp at which the wall showed up in the orderbook.
 
