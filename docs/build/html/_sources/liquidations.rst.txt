@@ -64,6 +64,8 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO XBTUSDT, ETHUSDT and so on
 **EXAMPLE:**  
 :code:`/v1/liquidations/?key=<YOUR_KEY>&market=BTCUSDT`.
 
+**RESPONSE**
+
 .. code-block:: json
 
 	{
@@ -105,8 +107,6 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO XBTUSDT, ETHUSDT and so on
 	    }
 	  ]
 	}
-
-**RESPONSE**
 
 **market:** name of the market.
 

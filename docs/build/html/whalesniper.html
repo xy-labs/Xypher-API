@@ -234,6 +234,49 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on</
 <p><strong>trend:</strong> get all the signals with a specific direction: trend or bull.
 <code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR_KEY&gt;&amp;trend=&lt;bear/bull&gt;</span></code>.</p>
 <p><strong>Example:</strong> <code class="code docutils literal notranslate"><span class="pre">/v1/whalesniper/?key=&lt;YOUR-KEY&gt;&amp;market=BTCUSDT&amp;exchange=binance</span></code>.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;count&quot;</span><span class="p">:</span> <span class="mi">127</span><span class="p">,</span>
+  <span class="nt">&quot;next&quot;</span><span class="p">:</span> <span class="s2">&quot;http://api.xypher.io/v1/whalesniper/?exchange=binance&amp;key=&lt;YOUR-KEY&gt;&amp;market=BTCUSDT&amp;page=2&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;previous&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="nt">&quot;results&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;market&quot;</span><span class="p">:</span> <span class="s2">&quot;BTCUSDT&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;pair&quot;</span><span class="p">:</span> <span class="s2">&quot;USDT&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;coin&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;exchange&quot;</span><span class="p">:</span> <span class="s2">&quot;Binance&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;oldAsk&quot;</span><span class="p">:</span> <span class="s2">&quot;39497.92&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;newAsk&quot;</span><span class="p">:</span> <span class="s2">&quot;41971.71&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;oldBid&quot;</span><span class="p">:</span> <span class="s2">&quot;39484.25&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;newBid&quot;</span><span class="p">:</span> <span class="s2">&quot;41955.92&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;oldVol&quot;</span><span class="p">:</span> <span class="s2">&quot;2847768300.27&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;newVol&quot;</span><span class="p">:</span> <span class="s2">&quot;3163939815.24&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;volDiff&quot;</span><span class="p">:</span> <span class="s2">&quot;11&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;316171514.97&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;oldUnix&quot;</span><span class="p">:</span> <span class="s2">&quot;1612788200&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;newUnix&quot;</span><span class="p">:</span> <span class="s2">&quot;1612788879&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;trend&quot;</span><span class="p">:</span> <span class="s2">&quot;bull&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;market&quot;</span><span class="p">:</span> <span class="s2">&quot;BTCUSDT&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;pair&quot;</span><span class="p">:</span> <span class="s2">&quot;USDT&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;coin&quot;</span><span class="p">:</span> <span class="s2">&quot;BTC&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;exchange&quot;</span><span class="p">:</span> <span class="s2">&quot;Binance&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;oldAsk&quot;</span><span class="p">:</span> <span class="s2">&quot;33695.39&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;newAsk&quot;</span><span class="p">:</span> <span class="s2">&quot;36831.52&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;oldBid&quot;</span><span class="p">:</span> <span class="s2">&quot;33695.38&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;newBid&quot;</span><span class="p">:</span> <span class="s2">&quot;36821.91&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;oldVol&quot;</span><span class="p">:</span> <span class="s2">&quot;4158620050.73&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;newVol&quot;</span><span class="p">:</span> <span class="s2">&quot;4616238341.94&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;volDiff&quot;</span><span class="p">:</span> <span class="s2">&quot;11&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="s2">&quot;457618291.21&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;oldUnix&quot;</span><span class="p">:</span> <span class="s2">&quot;1611910065&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;newUnix&quot;</span><span class="p">:</span> <span class="s2">&quot;1611910930&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;trend&quot;</span><span class="p">:</span> <span class="s2">&quot;bull&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <p><strong>RESPONSE</strong></p>
 <p><strong>Market:</strong> name of the market.</p>
 <p><strong>Pair:</strong> base pair.</p>

@@ -58,6 +58,9 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on
 
 **Example:** :code:`/v1/hmc/?key=<YOUR-KEY>&market=BTCUSDT&exchange=binance&timeframe=30m`.
 
+
+**RESPONSE**
+
 .. code-block:: json
 
 	{

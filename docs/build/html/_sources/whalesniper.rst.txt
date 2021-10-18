@@ -60,6 +60,7 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on
 **Example:** :code:`/v1/whalesniper/?key=<YOUR-KEY>&market=BTCUSDT&exchange=binance`.
 
 .. code-block:: json
+
 	{
 	  "count": 127,
 	  "next": "http://api.xypher.io/v1/whalesniper/?exchange=binance&key=<YOUR-KEY>&market=BTCUSDT&page=2",
