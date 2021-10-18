@@ -60,7 +60,7 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on
 .. code-block:: json
 	{
 	  "count": 127,
-	  "next": "http://51.79.25.135/v1/whalesniper/?exchange=binance&key=<YOUR-KEY>&market=BTCUSDT&page=2",
+	  "next": "http://api.xypher.io/v1/whalesniper/?exchange=binance&key=<YOUR-KEY>&market=BTCUSDT&page=2",
 	  "previous": null,
 	  "results": [
 	    {
