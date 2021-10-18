@@ -135,3 +135,160 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on
 
 **EXAMPLE:** :code:`/v1/markets/?key=<YOUR_KEY>&pair=BTCUSDT`.
 
+.. code-block:: json
+	{
+	  "market": "ZRXUSDT",
+	  "pair": "USDT",
+	  "exchange": "Binance",
+	  "ta_5m": {
+	    "RSI": 59,
+	    "MFI": 53,
+	    "STOCH_K": 20,
+	    "STOCH_D": 28,
+	    "PSAR": 0.9687201333280001,
+	    "MACD_L": 0.00242937,
+	    "MACD_H": -0.00029107,
+	    "MACD_S": 0.00272044,
+	    "ADX": 26.04,
+	    "ADX_P": 23.96,
+	    "ADX_M": 18.51,
+	    "CCI": 31,
+	    "WR": -34,
+	    "SMA_10": 0.9721,
+	    "SMA_25": 0.9693,
+	    "SMA_50": 0.9642,
+	    "SMA_100": 0.9654,
+	    "SMA_200": 0.9723,
+	    "EMA_10": 0.9719,
+	    "EMA_25": 0.9694,
+	    "EMA_50": 0.9671,
+	    "EMA_100": 0.9677,
+	    "EMA_200": 0.9723,
+	    "TS": 1634591866
+	  },
+	  "ta_30m": {
+	    "RSI": 52,
+	    "MFI": 40,
+	    "STOCH_K": 97,
+	    "STOCH_D": 90,
+	    "PSAR": 0.9540751600000001,
+	    "MACD_L": -0.00222698,
+	    "MACD_H": 0.00190293,
+	    "MACD_S": -0.00412991,
+	    "ADX": 24.61,
+	    "ADX_P": 18.85,
+	    "ADX_M": 22.18,
+	    "CCI": 108,
+	    "WR": -10,
+	    "SMA_10": 0.9648,
+	    "SMA_25": 0.9681,
+	    "SMA_50": 0.9758,
+	    "SMA_100": 0.9897,
+	    "SMA_200": 1,
+	    "EMA_10": 0.968,
+	    "EMA_25": 0.9698,
+	    "EMA_50": 0.976,
+	    "EMA_100": 0.9855,
+	    "EMA_200": 1,
+	    "TS": 1634591866
+	  },
+	  "ta_4h": {
+	    "RSI": 41,
+	    "MFI": 35,
+	    "STOCH_K": 25,
+	    "STOCH_D": 17,
+	    "PSAR": 1.0046019122761851,
+	    "MACD_L": -0.01155876,
+	    "MACD_H": -0.00301035,
+	    "MACD_S": -0.00854841,
+	    "ADX": 33.38,
+	    "ADX_P": 7.94,
+	    "ADX_M": 25.01,
+	    "CCI": -100,
+	    "WR": -69,
+	    "SMA_10": 0.9824,
+	    "SMA_25": 0.9989,
+	    "SMA_50": 1,
+	    "SMA_100": 1.02,
+	    "SMA_200": 0.9822,
+	    "EMA_10": 0.9811,
+	    "EMA_25": 0.9946,
+	    "EMA_50": 1,
+	    "EMA_100": 1,
+	    "EMA_200": 0.9829,
+	    "TS": 1634591867
+	  },
+	  "ta_1d": {
+	    "RSI": 45,
+	    "MFI": 47,
+	    "STOCH_K": 18,
+	    "STOCH_D": 22,
+	    "PSAR": 1.0292995205801683,
+	    "MACD_L": -0.00229908,
+	    "MACD_H": -0.00461888,
+	    "MACD_S": 0.0023198,
+	    "ADX": 18.76,
+	    "ADX_P": 11.06,
+	    "ADX_M": 23.13,
+	    "CCI": -114,
+	    "WR": -80,
+	    "SMA_10": 1,
+	    "SMA_25": 1.02,
+	    "SMA_50": 1,
+	    "SMA_100": 0.9777,
+	    "SMA_200": 1.09,
+	    "EMA_10": 1.01,
+	    "EMA_25": 1.01,
+	    "EMA_50": 1.01,
+	    "EMA_100": 1.03,
+	    "EMA_200": 1.09,
+	    "TS": 1634591868
+	  },
+	  "bid": 0.9755,
+	  "ask": 0.9763,
+	  "high": 0.9981,
+	  "low": 0.9501,
+	  "vol": 3114381.16,
+	  "m5_stats": {
+	    "buy": 0,
+	    "sell": 0
+	  },
+	  "m15_stats": {
+	    "buy": 0,
+	    "sell": 0
+	  }
+	}
+
+
+**RESPONSE**
+
+**Market:** name of the market.
+
+**Pair:** base pair.
+
+**Coin:** base currency.
+
+**Exchange:** name of the exchange.
+
+**ta_5m:** the value of various indicators on the 5m timeframe.
+
+**ta_30m:** the value of various indicators on the 30m timeframe.
+
+**ta_4h:** the value of various indicators on the 4h timeframe.
+
+**ta_1d:** the value of various indicators on the 1d timeframe.
+
+**bid:** latest bid.
+
+**ask:** latest ask.
+
+**high:** latest high.
+
+**low:** latest low.
+
+**vol:** trading volume for that market.
+
+**m5_stats** buy-sell difference (delta) on the 5m timeframe.
+
+**m15_stats** buy-sell difference (delta) on the 15m timeframe.
+

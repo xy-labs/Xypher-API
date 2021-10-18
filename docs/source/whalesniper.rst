@@ -99,3 +99,33 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on
 	    }
 	  ]
 	}
+
+**RESPONSE**
+
+**Market:** name of the market.
+
+**Pair:** base pair.
+
+**Coin:** base currency.
+
+**Exchange:** exchange where the alert was found.
+
+**oldAsk:** ask price BEFORE the trading activity took place.
+
+**newAsk:** ask price AFTER the trading activity took place.
+
+**oldBid:** bid price BEFORE the trading activity took place.
+
+**newBid:** bid price AFTER the trading activity took place.
+
+**oldVol:** volume BEFORE the trading activity took place.
+
+**newVol:** volume AFTER the trading activity took place.
+
+**volDiff:** volume difference before and after the trading activity took place.
+
+**amount:** amount of the unusual trading activity.
+
+**newUnix:** unix timestamp.
+
+**trend:** direction of the unusual activity. Can be bull, bear, or neutral.

@@ -105,3 +105,17 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO XBTUSDT, ETHUSDT and so on
 	    }
 	  ]
 	}
+
+**RESPONSE**
+
+**market:** name of the market.
+
+**exchange:** name of the exchange.
+
+**side:** liquidation side (can be short or long).
+
+**amount:** liquidated amount.
+
+**price:** liquidation price.
+
+**unixtime:** unix timestamp of the liquidation event.
