@@ -40,7 +40,7 @@ Examples
 
 	    
 
-**#Get all the liquidations above 100000 USD and above 30000 price for the BTCUSDT market**
+**Get all the liquidations above 100000 USD and above 30000 price for the BTCUSDT market**
 
 .. code-block:: python
 
