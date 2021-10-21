@@ -170,7 +170,7 @@
             
   <div class="section" id="markets">
 <h1>Markets<a class="headerlink" href="#markets" title="Permalink to this headline">¶</a></h1>
-<p>Get Technical Analysis data, used for the /TA command on XypherianBot, and volume data used for the Volume Screener hosted at Xypher.io. Available exchanges: Binance, Bitmex, Bittrex, Huobi.</p>
+<p>Get Technical Analysis data, used for the /TA command on XypherianBot, and volume data used for the Volume Screener hosted at Xypher.io. Available exchanges: Binance, Bitmex, Bittrex, Huobi. <strong>Notice:</strong> technical analysis and volume analysis data is returned only for Binance markets.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>GET /v1/markets/?key=&lt;YOUR_KEY&gt;
 </pre></div>
 </div>
@@ -323,7 +323,7 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on</
 <p><strong>volume:</strong> Get all markets with an higher volume than provided.
 <code class="code docutils literal notranslate"><span class="pre">/v1/markets/?key=&lt;YOUR_KEY&gt;&amp;volume=&lt;VOLUME&gt;</span></code>.</p>
 <p><strong>EXAMPLE:</strong> <code class="code docutils literal notranslate"><span class="pre">/v1/markets/?key=&lt;YOUR_KEY&gt;&amp;pair=BTCUSDT</span></code>.</p>
-<p><strong>RESPONSE:</strong></p>
+<p><strong>RESPONSE (if the exchange is binance):</strong></p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;market&quot;</span><span class="p">:</span> <span class="s2">&quot;ZRXUSDT&quot;</span><span class="p">,</span>
   <span class="nt">&quot;pair&quot;</span><span class="p">:</span> <span class="s2">&quot;USDT&quot;</span><span class="p">,</span>
@@ -448,21 +448,35 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on</
 <span class="p">}</span>
 </pre></div>
 </div>
+<p><strong>RESPONSE (Other exchanges):</strong></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;market&quot;</span><span class="p">:</span> <span class="s2">&quot;ZRXUSDT&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;pair&quot;</span><span class="p">:</span> <span class="s2">&quot;USDT&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;exchange&quot;</span><span class="p">:</span> <span class="s2">&quot;Binance Futures&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;bid&quot;</span><span class="p">:</span> <span class="s2">&quot;1.03840000&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;ask&quot;</span><span class="p">:</span> <span class="s2">&quot;1.03840000&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;high&quot;</span><span class="p">:</span> <span class="s2">&quot;1.03960000&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;low&quot;</span><span class="p">:</span> <span class="s2">&quot;0.96340000&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;vol&quot;</span><span class="p">:</span> <span class="s2">&quot;21115522.96&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <p><strong>Market:</strong> name of the market.</p>
 <p><strong>Pair:</strong> base pair.</p>
 <p><strong>Coin:</strong> base currency.</p>
 <p><strong>Exchange:</strong> name of the exchange.</p>
-<p><strong>ta_5m:</strong> the value of various indicators on the 5m timeframe.</p>
-<p><strong>ta_30m:</strong> the value of various indicators on the 30m timeframe.</p>
-<p><strong>ta_4h:</strong> the value of various indicators on the 4h timeframe.</p>
-<p><strong>ta_1d:</strong> the value of various indicators on the 1d timeframe.</p>
 <p><strong>bid:</strong> latest bid.</p>
 <p><strong>ask:</strong> latest ask.</p>
 <p><strong>high:</strong> latest high.</p>
 <p><strong>low:</strong> latest low.</p>
-<p><strong>vol:</strong> trading volume for that market.</p>
+<p><strong>vol:</strong> trading volume for that market</p>
+<p><strong>ONLY IF</strong> <code class="code docutils literal notranslate"><span class="pre">exchange=binance</span></code> <strong>:</strong></p>
 <p><strong>m5_stats</strong> buy-sell difference (delta) on the 5m timeframe.</p>
 <p><strong>m15_stats</strong> buy-sell difference (delta) on the 15m timeframe.</p>
+<p><strong>ta_5m:</strong> the value of various indicators on the 5m timeframe.</p>
+<p><strong>ta_30m:</strong> the value of various indicators on the 30m timeframe.</p>
+<p><strong>ta_4h:</strong> the value of various indicators on the 4h timeframe.</p>
+<p><strong>ta_1d:</strong> the value of various indicators on the 1d timeframe.</p>
 </div>
 </div>
 

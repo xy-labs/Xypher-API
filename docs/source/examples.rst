@@ -57,7 +57,7 @@ Examples
 	print(liqs)
 
 
-**#Get a summary of all the markets on Binance**
+**Get a summary of all the markets on Binance**
 
 .. code-block:: python
 

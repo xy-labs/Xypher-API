@@ -3,7 +3,7 @@
 Markets
 ========
 
-Get Technical Analysis data, used for the /TA command on XypherianBot, and volume data used for the Volume Screener hosted at Xypher.io. Available exchanges: Binance, Bitmex, Bittrex, Huobi.
+Get Technical Analysis data, used for the /TA command on XypherianBot, and volume data used for the Volume Screener hosted at Xypher.io. Available exchanges: Binance, Bitmex, Bittrex, Huobi. **Notice:** technical analysis and volume analysis data is returned only for Binance markets.
 
 
 .. code-block:: python
@@ -136,7 +136,9 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on
 **EXAMPLE:** :code:`/v1/markets/?key=<YOUR_KEY>&pair=BTCUSDT`.
 
 
-**RESPONSE:**
+
+
+**RESPONSE (if the exchange is binance):**
 
 .. code-block:: json
 
@@ -263,6 +265,24 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on
 	  }
 	}
 
+
+**RESPONSE (Other exchanges):**
+
+.. code-block:: json
+
+	{
+	  "market": "ZRXUSDT",
+	  "pair": "USDT",
+	  "exchange": "Binance Futures",
+	  "bid": "1.03840000",
+	  "ask": "1.03840000",
+	  "high": "1.03960000",
+	  "low": "0.96340000",
+	  "vol": "21115522.96"
+	}
+
+
+
 **Market:** name of the market.
 
 **Pair:** base pair.
@@ -270,14 +290,6 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on
 **Coin:** base currency.
 
 **Exchange:** name of the exchange.
-
-**ta_5m:** the value of various indicators on the 5m timeframe.
-
-**ta_30m:** the value of various indicators on the 30m timeframe.
-
-**ta_4h:** the value of various indicators on the 4h timeframe.
-
-**ta_1d:** the value of various indicators on the 1d timeframe.
 
 **bid:** latest bid.
 
@@ -287,9 +299,18 @@ THE ACCEPTED MARKET FORMAT IS COINPAIR: SO BTCUSDT, ETHUSDT, BNBUSDT and so on
 
 **low:** latest low.
 
-**vol:** trading volume for that market.
+**vol:** trading volume for that market
+
+**ONLY IF** :code:`exchange=binance` **:**
 
 **m5_stats** buy-sell difference (delta) on the 5m timeframe.
 
 **m15_stats** buy-sell difference (delta) on the 15m timeframe.
 
+**ta_5m:** the value of various indicators on the 5m timeframe.
+
+**ta_30m:** the value of various indicators on the 30m timeframe.
+
+**ta_4h:** the value of various indicators on the 4h timeframe.
+
+**ta_1d:** the value of various indicators on the 1d timeframe.
